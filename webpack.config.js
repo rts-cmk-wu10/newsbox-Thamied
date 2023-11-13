@@ -11,23 +11,7 @@ module.exports = {
 	mode: "production",
     plugins: [new MiniCssExtractPlugin(), new HtmlWebpackPlugin({
         template: path.resolve(__dirname, "src", "index.html")
-    }),
-    new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, "src", "artikel.html"),
-        filename: "artikel.html"
-    }),
-    new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, "src", "todo.html"),
-        filename: "todo.html"
-    }),
-    new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, "src", "darkmode.html"),
-        filename: "darkmode.html"
-    }),
-    new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, "src", "touch.html"),
-        filename: "touch.html"
-    }),],
+	}), ],
 	module: {
 		rules: [
 			{
