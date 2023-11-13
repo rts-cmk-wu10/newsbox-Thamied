@@ -77,9 +77,9 @@
   height: 100%;
 }
 .header {
-  display: flex; // display the element with display flex
-  justify-content: space-between; //space between the elements inside header
-  padding: 5% 10%; //padding top and bottom 0px padding left and right 10px
+  display: flex; 
+  justify-content: space-between; 
+  padding: 5% 10%; 
  
   .header__archive,
   .header__settings {
