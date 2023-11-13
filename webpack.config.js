@@ -9,9 +9,22 @@ module.exports = {
 
 
 	mode: "production",
-    plugins: [new MiniCssExtractPlugin(), new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, "src", "index.html")
-	}), ],
+    plugins: [
+		new MiniCssExtractPlugin(),
+		new HtmlWebpackPlugin({
+		  template: path.resolve(__dirname, "src", "index.html"),
+		}),
+		new HtmlWebpackPlugin({
+		  template: path.resolve(__dirname, "src", "archive.html"),
+		  filename: "archive.html",
+		}),
+		new HtmlWebpackPlugin({
+		  template: path.resolve(__dirname, "src", "settings.html"),
+		  filename: "settings.html",
+		}),
+	  ],
+
+	
 	module: {
 		rules: [
 			{
