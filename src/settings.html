@@ -1,24 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Settings</title>
-    <link rel="stylesheet" href="./main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./main.css" />
     <script src="./main.js" defer></script>
-</head>
-<body>
-    <div id="wrapper">
-        <header class="header">
-            <a href=""><img class="header__archive" src="images/Arrow_Left.png" alt="Archive"></a>
- 
-            <h2 class="header__Title">Newsbox</h2>
- 
-            <a href=""><img class="header__settings" src="images/Setting_icon.png" alt="Settings"></a>
-        </header>
-        <section class="search">
-            <input class="search__bar" type="search" placeholder="Search news" name="search__bar" id="">
-        </section>
-    
-</body>
+    <title>News Settings</title>
+  </head>
+
+
+  <body>
+    <div class="container">
+      <h1>Manage</h1>
+      <h2>Categories</h2>
+
+      <div class="space-around">
+        <div class="toggle-container">
+          <div class="toggle-label">Europe</div>
+          <label class="toggle-switch">
+            <input type="checkbox" />
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+
+        <div class="toggle-container">
+          <div class="toggle-label">Health</div>
+          <label class="toggle-switch">
+            <input type="checkbox" />
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+
+        <div class="toggle-container">
+          <div class="toggle-label">Sport</div>
+          <label class="toggle-switch">
+            <input type="checkbox" />
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+
+        <div class="toggle-container">
+          <div class="toggle-label">Business</div>
+          <label class="toggle-switch">
+            <input type="checkbox" />
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+
+        <div class="toggle-container">
+          <div class="toggle-label">Travel</div>
+          <label class="toggle-switch">
+            <input type="checkbox" />
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+
+        <div class="dark-mode-container">
+          <button class="dark-mode-button" onclick="toggleDarkMode()">
+            Toggle Dark Mode
+          </button>
+        </div>
+      </div>
+
+      <div class="fake-version">Version 4.8.15.16.23.42</div>
+    </div>
+  </body>
 </html>
