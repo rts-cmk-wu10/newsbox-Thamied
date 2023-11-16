@@ -36,8 +36,22 @@ import getJSONfromLocalStorage from "./getJSONfromLocalStorage"
     const LI = document.createElement('li')
 
     LI.innerHTML += `
-    <h2>${category}</h2>
+    <div style="display: flex; justify-content: space-between; align-items: center">
+      <div style="display: flex">
+        <span class="material-symbols-outlined">
+        crop_square
+        </span>
+
+
+          <h2>${category}</h2>
+      </div>
+      <span class="material-symbols-outlined">
+        chevron_right
+        </span>
+    </div>
+    
     `
+
 
     LI.addEventListener('click', async () => {
       const apiKey = "S9jcgNFQNpvpBKGockNgkBjQQRoMaYKi";
