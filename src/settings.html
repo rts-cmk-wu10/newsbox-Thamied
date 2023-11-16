@@ -1,13 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Settings</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./main.css">
     <script src="./main.js" defer></script>
-</head>
-<body>
-    
-</body>
+    <title>News Settings</title>
+  </head>
+
+
+  <body>
+    <div class="container">
+      <h1>Manage</h1>
+      <h2>Categories</h2>
+
+      <div class="space__around">
+        <div class="toggle__container">
+          <div class="toggle__label">Europe</div>
+          <label class="toggle__switch">
+            <input type="checkbox" />
+            <span class="toggle__slider"></span>
+          </label>
+        </div>
+
+        <div class="toggle__container">
+          <div class="toggle__label">Health</div>
+          <label class="toggle__switch">
+            <input type="checkbox" />
+            <span class="toggle__slider"></span>
+          </label>
+        </div>
+
+        <div class="toggle__container">
+          <div class="toggle__label">Sport</div>
+          <label class="toggle__switch">
+            <input type="checkbox" />
+            <span class="toggle__slider"></span>
+          </label>
+        </div>
+
+        <div class="toggle__container">
+          <div class="toggle__label">Business</div>
+          <label class="toggle__switch">
+            <input type="checkbox" />
+            <span class="toggle__slider"></span>
+          </label>
+        </div>
+
+        <div class="toggle__container">
+          <div class="toggle__label">Travel</div>
+          <label class="toggle__switch">
+            <input type="checkbox" />
+            <span class="toggle__slider"></span>
+          </label>
+        </div>
+
+        <div class="dark__mode__container">
+          <button class="dark__mode__button" onclick="toggleDarkMode()">
+            Toggle Dark Mode
+          </button>
+        </div>
+      </div>
+
+      <div class="fake__version">Version 4.8.15.16.23.42</div>
+    </div>
+  </body>
 </html>

@@ -1,17 +1,17 @@
-export default (function() {
-	if (!window.location.pathname.includes("index.html")) return // guard clause
+//  export default (function() {
+//  	if (!window.location.pathname.includes("index.html")) return // guard clause
 
-	const FORM = document.querySelector(".nameForm")
-	const NAME = document.querySelector(".name")
+//  	const FORM = document.querySelector(".")
+//  	const NAME = document.querySelector(".")
 
-	NAME.innerText = localStorage.getItem("name")
+//  	NAME.innerText = localStorage.getItem("")
 
-	FORM.addEventListener("submit", submitHandler)
+//  	FORM.addEventListener("submit", submitHandler)
 
-	function submitHandler(event) {
-		event.preventDefault()
+//  	function submitHandler(event) {
+//  		event.preventDefault()
 
-		localStorage.setItem("name", event.target.nameInput.value)
-		NAME.innerText = localStorage.getItem("name")
-	}
-})()
+//  		localStorage.setItem("", event.target.nameInput.value)
+//  		NAME.innerText = localStorage.getItem("")
+//  	}
+//  })()
