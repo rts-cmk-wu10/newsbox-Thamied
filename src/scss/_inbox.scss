@@ -1,6 +1,18 @@
-
 .news__category__all__list {
   display: flex;
   flex-direction: column;
+  text-align: right;
+}
+
+.category {
+  border: 1px solid black;
+}
+
+.circleimg {
+border-radius: 50%;
+margin-left: 50px;
+overflow: hidden;
+width: 100px;
+height: 100px;
 }
 

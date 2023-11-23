@@ -1,6 +1,6 @@
+export default (function () {
 
-import getJSONfromLocalStorage from "./getJSONfromLocalStorage"
-
+  if (!window.location.pathname.includes("index.html")) return
 
 // Function to fetch data from the API and update headlines and descriptions
 (function () {
@@ -33,25 +33,23 @@ import getJSONfromLocalStorage from "./getJSONfromLocalStorage"
   ];
   const list = document.querySelector(".news__category__all__list");
   categories.forEach(async (category) => {
-    const LI = document.createElement('li')
+    const LI = document.createElement('details')
 
     LI.innerHTML += `
-    <div style="display: flex; justify-content: space-between; align-items: center">
+    <summary class="category" style="display: flex; justify-content: space-between; align-items: center">
       <div style="display: flex">
         <span class="material-symbols-outlined">
         crop_square
         </span>
-
 
           <h2>${category}</h2>
       </div>
       <span class="material-symbols-outlined">
         chevron_right
         </span>
-    </div>
-    
-    `
+    </summary>
 
+    ` 
 
     LI.addEventListener('click', async () => {
       const apiKey = "S9jcgNFQNpvpBKGockNgkBjQQRoMaYKi";
@@ -61,9 +59,11 @@ import getJSONfromLocalStorage from "./getJSONfromLocalStorage"
       const data = await response.json();
 
       data.results.forEach(res => {
+        console.log(res)
         LI.innerHTML += `
           ${res.title}
           ${res.abstract}
+          <img class="circleimg" src="${res.multimedia[0].url}">
         `
       })
     })
@@ -92,3 +92,4 @@ async function updateHeadlinesAndDescriptions(category) {
 
 // Call the function to update headlines and descriptions when the page loads
 window.addEventListener("load", updateHeadlinesAndDescriptions);
+})()
